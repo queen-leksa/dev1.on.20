@@ -13,8 +13,6 @@ window.addEventListener("load", () => {
     // });
 
     let html = images.map(img => `<div class="mini" data-src=${img} style="background-image: url(${img})"></div>`);
-    console.log(html);
-
     content.innerHTML = html.join("");
 
 });
