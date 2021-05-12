@@ -1,0 +1,75 @@
+body {
+    margin: 0;
+}
+.miniatures {
+    width: 1000px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 250px;
+    gap: 2rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+.mini {
+    border: .4px dotted lightslategray;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+.lightbox {
+    width: 70vw;
+    height: 70vh;
+    position: fixed;
+    left: 15vw;
+    top: 15vh;
+    background: lightsteelblue;
+    border-radius: 2rem;
+    display: none;
+    padding: 2rem;
+}
+.lightbox>.box {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.show-box .lightbox {
+    display: block;
+}
+.show-box {
+    overflow: hidden;
+}
+.show-box::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fffa;
+}
+.arrow {
+    position: absolute;
+    font-size: 2rem;
+    line-height: 1;
+    top: calc(50% - 1rem);
+    cursor: pointer;
+}
+.next {
+    right: 1rem;
+}
+.prev {
+    left: 1rem;
+    transform: scale(-1,1);
+}
+.cross {
+    font-size: 2rem;
+    line-height: 1;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
